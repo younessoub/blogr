@@ -1,0 +1,495 @@
+/*(CTA text)*/
+/*(CTA hover background)*/
+/*(headings)*/
+/*(footer text)*/
+/*(body copy)*/
+/*(footer background)*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  background: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(to right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  background-position: 40% 40%;
+  padding-top: 2rem;
+  border-bottom-left-radius: 5rem;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.2rem;
+  position: relative;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.header .nav .mainNav {
+  display: flex;
+}
+.header .nav .mainNav .dropdowns {
+  margin-left: 2rem;
+  display: none;
+  align-items: center;
+}
+.header .nav .mainNav .dropdowns .dropdown {
+  position: relative;
+  margin: 0 1rem;
+}
+.header .nav .mainNav .dropdowns .dropdown .dropdownToggle {
+  cursor: pointer;
+  color: white;
+  opacity: 0.9;
+  font-weight: 500;
+}
+.header .nav .mainNav .dropdowns .dropdown .dropdownToggle.active img {
+  transform: rotate(180deg);
+}
+.header .nav .mainNav .dropdowns .dropdown .dropdownToggle.active ~ .dropdownItems {
+  display: flex;
+}
+.header .nav .mainNav .dropdowns .dropdown .dropdownToggle:hover {
+  opacity: 1;
+}
+.header .nav .mainNav .dropdowns .dropdown .dropdownToggle:hover span {
+  text-decoration: underline;
+}
+.header .nav .mainNav .dropdowns .dropdown .dropdownItems {
+  position: absolute;
+  display: none;
+  width: 10rem;
+  top: calc(100% + 1rem);
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+.header .nav .mainNav .dropdowns .dropdown .dropdownItems a {
+  margin-top: 0.7rem;
+  font-weight: 500;
+  color: hsl(207deg, 13%, 34%);
+}
+.header .nav .mainNav .dropdowns .dropdown .dropdownItems a:hover {
+  color: hsl(240deg, 10%, 16%);
+}
+.header .nav .desktopNavButtons {
+  display: none;
+}
+.header .nav .desktopNavButtons button {
+  border: none;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 6rem;
+  font-weight: 500;
+}
+.header .nav .desktopNavButtons .login {
+  color: white;
+  background: none;
+}
+.header .nav .desktopNavButtons .signup {
+  background-color: white;
+  color: hsl(356deg, 100%, 66%);
+}
+.header .nav .desktopNavButtons .signup:hover {
+  background-color: rgba(250, 250, 250, 0.5);
+  color: white;
+}
+.header .nav .menuOpen {
+  display: none;
+}
+.header .nav .menuOpen.active {
+  display: block;
+}
+.header .nav .menuClose {
+  display: none;
+}
+.header .nav .menuClose.active {
+  display: block;
+}
+.header .nav .menuClose.active ~ .mobileNav {
+  display: block;
+}
+.header .nav .mobileNav {
+  display: none;
+  position: absolute;
+  top: calc(100% + 2rem);
+  left: 1.2rem;
+  right: 1.2rem;
+  background-color: white;
+  border-radius: 0.3rem;
+  padding: 1.5rem 0;
+  color: hsl(208deg, 49%, 24%);
+}
+.header .nav .mobileNav .dropdown {
+  font-weight: 500;
+  width: 90%;
+  margin: 0 auto 1rem auto;
+}
+.header .nav .mobileNav .dropdown .dropdownToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+.header .nav .mobileNav .dropdown .dropdownToggle span {
+  margin-right: 0.5rem;
+}
+.header .nav .mobileNav .dropdown .dropdownToggle.active ~ .dropdownItems {
+  display: flex;
+}
+.header .nav .mobileNav .dropdown .dropdownToggle.active img {
+  transform: rotate(180deg);
+}
+.header .nav .mobileNav .dropdown .dropdownItems {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(240deg, 2%, 79%);
+  border-radius: 0.3rem;
+  padding-top: 0.7rem;
+}
+.header .nav .mobileNav .dropdown .dropdownItems a {
+  margin-bottom: 0.7rem;
+  color: hsl(207deg, 13%, 34%);
+}
+.header .nav .mobileNav .line {
+  width: 90%;
+  margin: 1rem auto;
+}
+.header .nav .mobileNav .mobileNavButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .nav .mobileNav .mobileNavButtons button {
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  border-radius: 5rem;
+  font-weight: 500;
+}
+.header .nav .mobileNav .mobileNavButtons .login {
+  background: transparent;
+}
+.header .nav .mobileNav .mobileNavButtons .signup {
+  background-image: linear-gradient(to right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  color: white;
+}
+.header .hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  color: white;
+}
+.header .hero h1 {
+  margin-bottom: 1.5rem;
+}
+.header .hero p {
+  margin-bottom: 3rem;
+}
+.header .hero button {
+  width: 8.7rem;
+  height: 2.7rem;
+  border-radius: 8rem;
+  font-weight: 500;
+}
+.header .hero .start {
+  background-color: white;
+  color: hsl(356deg, 100%, 66%);
+}
+.header .hero .start:hover {
+  color: white;
+  background-color: rgba(250, 250, 250, 0.5);
+}
+.header .hero .learn {
+  border: 1px solid white;
+  color: white;
+}
+.header .hero .learn:hover {
+  background-color: white;
+  color: hsl(356deg, 100%, 66%);
+}
+
+@media screen and (min-width: 45rem) {
+  .header {
+    background: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(to right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+    background-position: 30% 50%;
+  }
+  .mainNav .dropdowns {
+    display: flex !important;
+  }
+  .desktopNavButtons {
+    display: block !important;
+  }
+  .menuClose {
+    display: none !important;
+  }
+  .menuOpen {
+    display: none !important;
+  }
+  .mobileNav {
+    display: none !important;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .start {
+    margin-right: 2rem;
+  }
+}
+.design {
+  padding: 5rem 0;
+  text-align: center;
+}
+.design h2,
+.design h3 {
+  color: hsl(208deg, 49%, 24%);
+}
+.design h2 {
+  margin-bottom: 3rem;
+}
+.design .content img {
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+.design .content .designImgDesktop {
+  display: none;
+}
+.design .content .text {
+  padding-inline: 2rem;
+}
+.design .content .text h3 {
+  margin-bottom: 1rem;
+}
+.design .content .text p {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 68.75rem) {
+  .design {
+    padding: 8rem 0;
+    overflow-x: hidden;
+  }
+  .design h2 {
+    font-size: 2rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+    margin-right: -16rem;
+    margin-top: -11rem;
+  }
+  .content .img {
+    max-width: 50% !important;
+  }
+  .content .text {
+    padding-left: 9rem !important;
+    padding-right: 6rem !important;
+  }
+  .content .text h3 {
+    font-size: 1.5rem;
+  }
+  .content .text p {
+    margin-bottom: 4rem !important;
+  }
+  .designImgDesktop {
+    display: block !important;
+  }
+  .designImgMobile {
+    display: none;
+  }
+}
+.state {
+  background-color: hsl(208deg, 49%, 24%);
+  margin-top: 6rem;
+  border-top-right-radius: 7rem;
+  border-bottom-left-radius: 7rem;
+  text-align: center;
+  color: white;
+}
+.state .imgs {
+  background-image: url("../images/bg-pattern-circles.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 165%;
+  border-top-right-radius: 7rem;
+}
+.state .imgs img {
+  transform: translateY(-9rem);
+}
+.state .text {
+  padding-inline: 1.5rem;
+  transform: translateY(-8rem);
+}
+.state .text h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 84.375rem) {
+  .state {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    text-align: left;
+    height: 25rem;
+    padding-right: 10rem;
+  }
+  .state .imgs {
+    width: 55%;
+    background-image: url("../images/bg-pattern-circles.svg");
+    background-position: 125% 100%;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    border-top-right-radius: unset;
+    position: relative;
+    min-height: 100%;
+  }
+  .state .imgs img {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+  }
+  .state .text {
+    transform: unset;
+    transform: translateX(-6rem);
+    padding-inline: unset;
+    width: 45%;
+  }
+  .state .text h2 {
+    font-size: 2.3rem;
+  }
+  .state .text p {
+    line-height: 1.5rem;
+  }
+}
+.features {
+  padding-top: 4rem;
+  text-align: center;
+}
+.features .illus .featuresImgDesktop {
+  display: none;
+}
+.features .text {
+  margin-top: 3rem;
+  padding-inline: 2rem;
+}
+.features .text h3 {
+  color: hsl(208deg, 49%, 24%);
+  margin-bottom: 1rem;
+}
+.features .text p {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 62.5rem) {
+  .features {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-top: 7rem;
+    transform: translateX(-15.5rem);
+  }
+  .features .illus {
+    width: 60%;
+  }
+  .features .illus .featuresImgDesktop {
+    display: block;
+  }
+  .features .illus .featuresImgMobile {
+    display: none;
+  }
+  .features .text {
+    width: 40%;
+  }
+  .features .text h3 {
+    font-size: 1.5rem;
+  }
+  .features .text p {
+    margin-bottom: 3rem;
+    line-height: 2rem;
+  }
+}
+footer {
+  background-color: hsl(240deg, 10%, 16%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top-right-radius: 5rem;
+  color: white;
+  padding: 3rem 0;
+}
+footer .logo {
+  margin-bottom: 2rem;
+}
+footer h4 {
+  margin-top: 2rem;
+}
+footer a {
+  display: block;
+  color: hsl(240deg, 2%, 79%);
+  margin-top: 0.5rem;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 59.375rem) {
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    padding: 3rem 15rem;
+  }
+  footer h4 {
+    margin-top: 0.6rem;
+  }
+}/*# sourceMappingURL=style.css.map */
